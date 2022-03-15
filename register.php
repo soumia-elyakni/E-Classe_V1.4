@@ -6,22 +6,23 @@ if(isset($_SESSION['ouvert'])){
   header("location: home.php");
   
   }
-
+  
+ 
 $connect = new mysqli("localhost", "root", "", "e_classe_db");
 
 if(isset($_POST['save'])){
 
 $name = $_POST['name'];
 $email = $_POST['email'];
-$pass = $_POST['pass'];
+$pass = hash('ripemd160', $_POST['pass']);
+
 
 $sql = "INSERT INTO comptes (name, email, pass) VALUES ('$name','$email','$pass')";
 $user = $connect -> query($sql);
 $connect -> close();
-header("location : index.php ");
+
+header("location: index.php");
 }
-
-
 
 ?>
 
@@ -46,32 +47,37 @@ header("location : index.php ");
             <p class="text-center text-muted mt-2">Enter your infos to creat a user compte</p>
             
         </div>
-        <form class="mt-5 pb-3" method="POST">
+        <form id="form" class="mt-5 pb-3" method="POST" action="">
 
 
                 <label for="name">
                   <span>Your Name:</span>
                 </label>
-                <input type="text" id="pass" name="name" class="w-100 p-1 mt-2  text-muted" placeholder="Enter your name">
+                <input type="text" id="name" name="name" class="input w-100 p-1 mt-2  text-muted" placeholder="Enter your name">
+                <p class="messageName"></p>
             
                 <label for="email">
                   <span>Email :</span>
                 </label>
-                <input type="email" id="email" name="email" class="w-100 p-1 mt-2  text-muted" placeholder="Enter your email">
+                <input type="email" id="email" name="email" class="input w-100 p-1 mt-2  text-muted"  placeholder="Enter your email">
+                <p class="messageEmail"></p>
               
               
                 <label for="pass">
                   <span>Password :</span>
                 </label>
-                <input type="password" id="pass" name="pass" class="w-100 p-1 mt-2  text-muted" placeholder="Enter your password">
+                <input type="password" id="pass" name="pass" class="input w-100 p-1 mt-2  text-muted"  placeholder="Enter your password">
+                <p class="messagePass"></p>
                 
                
-                <button type="submit" class="btn btn-info w-100 mt-3 text-white text-decoration-none" name="save">REGISTER</button>
+                <button type="submit" class="btn btn-info w-100 mt-3 text-white text-decoration-none" name="save" id="submit">REGISTER</button>
                 
                 <p class="text-center mt-2"><span class="text-muted">You have a user compte</span><a href="index.php">Click here to sign in</a></p>
                
               
         </form>
     </section>
+    <script src="js/script.js"></script>
 </body>
 </html>
+

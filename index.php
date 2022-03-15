@@ -7,6 +7,7 @@ header("location: home.php");
 
 }
 
+
 if(isset($_POST['signin'])){
   if(!empty($_POST['email']) && !empty($_POST['pass'])){ 
   $connect = new mysqli("localhost", "root", "", "e_classe_db");
@@ -14,7 +15,7 @@ if(isset($_POST['signin'])){
     die("Connection failed: " . $conn->connect_error);
 }
   $email = $_POST['email'];
-  $pass = $_POST['pass'];
+  $pass = hash('ripemd160', $_POST['pass']);
  $sql="SELECT * FROM comptes WHERE email = '$email' AND pass = '$pass'";
  $read =$connect-> query($sql); 
  if($read -> num_rows > 0){
@@ -34,10 +35,6 @@ if(isset($_POST['signin'])){
   
     $_SESSION["message_error"] = "email or password incorrect";
   }
-}
-else {
-  
-  $_SESSION["message_error"] = "Remplissez les champs";
 }
 }
 
@@ -67,24 +64,26 @@ else {
                    <?php if(isset($_SESSION["message_error"])){ echo $_SESSION["message_error"] ;} ?>
             </p>
         </div>
-        <form class="mt-4 pb-3" method="POST">
+        <form class="mt-4 pb-3" method="POST" id="form">
      
                 <label for="email">
                   <span>Email :</span>
                 </label>
                 <input type="email" id="email" name="email" class="w-100 p-1 mt-2  text-muted" placeholder="Enter your email" value="<?php if(isset($_COOKIE['email'])) echo $_COOKIE['email']; ?>">
-                <p></p>
+                <p class="messageEmail"></p>
+
                 <label for="pass">
                   <span>Password :</span>
                 </label>
                 <input type="password" id="pass" name="pass" class="w-100 p-1 mt-2  text-muted" placeholder="Enter your password" value="<?php if(isset($_COOKIE['pass'])) echo $_COOKIE['pass']; ?>">
+                <p class="messagePass"></p>
                 
                 <div class="form-check form-switch ms-1 m-1">
                 <input class="form-check-input" type="checkbox" name="box" id="flexSwitchCheckDefault">
                 <label class="form-check-label" for="flexSwitchCheckDefault">Remember me</label>
                 </div>
              
-                <button type="submit" class="btn btn-info w-100 mt-3 mb-2 text-white text-decoration-none" name="signin">SIGN IN</button>
+                <button type="submit" class="btn btn-info w-100 mt-3 mb-2 text-white text-decoration-none" name="signin" id="submit">SIGN IN</button>
                 
                 <p class="text-center"><span class="text-muted">Forgot your password?</span> <a href="#">Reset Password</a></p>
                 <p class="text-center"><span class="text-muted">You don't have a user compte?</span><a href="register.php">Click here to register</a></p>
@@ -92,6 +91,7 @@ else {
               
         </form>
     </section>
-
+    <script src="js/script.js"></script>
 </body>
 </html>
+
