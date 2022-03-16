@@ -31,11 +31,16 @@ body{
   } */
 
   .messageEmail{
-      font-size: 15px;
+      font-size: 13px;
       color : red;
   }
 
   .messagePass{
-    font-size: 15px;
+    font-size: 13px;
+    color : red;
+}
+
+  .messageName{
+    font-size: 13px;
     color : red;
 }
