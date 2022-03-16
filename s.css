@@ -4,7 +4,7 @@
      position: fixed; 
     background-color: #FAFFC1;
     ;
-    z-index: 50;
+    z-index: 20;
 }
 
  /* .linklist{
@@ -36,7 +36,7 @@
     top: O;
     height: 62px;
     position: fixed;
-    z-index: 40;
+    z-index: 10;
 }
 .side_bar ul li,
 .nav_bar ul li{

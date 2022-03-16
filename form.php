@@ -48,10 +48,6 @@ if(!isset($_SESSION['ouvert'])){
             </label>
             <input type="tel"  name="enroll_number" class="w-100 p-1 mt-2">
 
-            <label for="date_of_admission">
-                <span>Date of admission :</span>
-            </label>
-            <input type="date"  name="date_of_admission" class="w-100 p-1 mt-2">
 
             <input type="submit" value="save" name="save" class="btn btn-info w-100 mt-4"><a href="" class="text-white text-decoration-none"></a>
 

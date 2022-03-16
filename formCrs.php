@@ -43,7 +43,7 @@ if(!isset($_SESSION['ouvert'])){
             </label>
             <input type="text"  name="prix" class="w-100 p-1 mt-2">
 
-            
+        
 
             <input type="submit" value="save" name="save" class="btn btn-info w-100 mt-4"><a href="" class="text-white text-decoration-none"></a>
 

@@ -38,7 +38,7 @@ $conn = new mysqli('localhost', 'root', '', 'e_classe_db');
         $res = $conn->query($sql);
         $row = $res->fetch_assoc();
     
-                echo "ok";
+                
                 $title = $row ["title"];
                 $chapitre = $row ["chapitre"];
                 $prix = $row ["prix"];
