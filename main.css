@@ -13,10 +13,18 @@ main{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 50; /* Sit on top */
-    width: 80vh; 
+    width: 80vw; 
+    margin: auto;
+    align-self: center;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  .modal-header{
+      display: block;
+      text-align: center;
+      
   }
 
   .modal-content {
@@ -27,6 +35,34 @@ main{
     width: 80%; /* Could be more or less, depending on screen size */
     z-index: 55;
   }
+
+
+
+  /* les messages de vide inputs */
+  .messageTitle{
+    font-size: 13px;
+    color : red;
+  }
+
+  .messageChapter{
+    font-size: 13px;
+    color : red;
+  }
+
+  .messagePrix{
+    font-size: 13px;
+    color : red;
+  }
+
+  .messageName{
+    font-size: 13px;
+    color : red;
+}
+
+.messageEmail{
+    font-size: 13px;
+    color : red;
+}
 
 /* .Atable{
     position: fixed;

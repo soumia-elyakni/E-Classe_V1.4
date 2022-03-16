@@ -79,9 +79,9 @@ if(form) {
 
 //Session Ouverte 
 //Modal
-const courAdd = document.getElementById('courAdd');
-const studentAdd = document.getElementById('studentAdd');
-const payementAdd = document.getElementById('payementAdd');
+const add = document.getElementById('add');
+// const studentAdd = document.getElementById('studAdd');
+// const payementAdd = document.getElementById('payementAdd');
 const close = document.getElementById('close')
 const modalAdd = document.getElementById('addModal');
 
@@ -92,7 +92,9 @@ const addCourForm = document.getElementById('formAddCrs')
 const titleInput = document.getElementById('title');
 const chapitreInput = document.getElementById('chapitre');
 const prixInput = document.getElementById('prix');
-
+const messageTitle = document.querySelector('.messageTitle');
+const messageChapter = document.querySelector('.messageChapter');
+const messagePrix = document.querySelector('.messagePrix');
   //students et payements
 
 
@@ -100,7 +102,7 @@ const prixInput = document.getElementById('prix');
 // Modals 
 
 // Show the model
-courAdd.onclick = function() {
+add.onclick = function() {
     modalAdd.style.display = "block";
   }
 
@@ -112,28 +114,28 @@ if(addCourForm) {
     addCourForm.addEventListener('submit', (e) => {
         if (titleInput.value == "") {
             e.preventDefault()
-            
+            messageTitle.textContent = "Ce Champ est Obligatoire";
             titleInput.style.borderColor = "red";
         } else {
-            // messageEmail.textContent = "";
-            titleInput.style.borderColor = "blue";
+            messageTitle.textContent = "";
+            titleInput.style.borderColor = "green";
         }
         if(chapitreInput.value == 0){
            e.preventDefault()
-            
+            messageChapter.textContent = "Indiquez le nombre des chapitres"; 
             chapitreInput.style.borderColor = "red"; 
         } else {
-             // messagePass.textContent = "";
-             chapitreInput.style.borderColor = "blue";
+             messageChapter.textContent = "";
+             chapitreInput.style.borderColor = "green";
         }
 
         if (prixInput.value == "") {
             e.preventDefault()
-            
+            messagePrix.textContent = "Définissez le prix du cour";
             prixInput.style.borderColor = "red";
         } else {
-            // messagePass.textContent = "";
-            prixInput.style.borderColor = "blue";
+            messagePass.textContent = "";
+            prixInput.style.borderColor = "green";
         }
     })
 }

@@ -35,9 +35,9 @@ if(!isset($_SESSION['ouvert'])){
               <button style="border: transparent; background: transparent; align-self: center;"> 
                  <img src="images/svg/buttonpay.svg">
               </button>
-              <a href="form.php"><button class="addns text-white" style="border : none; background: #00C1FE; border-radius: 4px;">
+            <button id="add" class="addns text-white" style="border : none; background: #00C1FE; border-radius: 4px;">
              ADD NEW STUDENT
-             </button></a>
+             </button>
              </div>
       </section>
 
@@ -93,6 +93,50 @@ if(!isset($_SESSION['ouvert'])){
         ?>
          </tbody>
         </table> 
+
+         <!-- modal Add -->
+
+ 
+ <div id="addModal" class="modal">
+    <div class="modal-content ">
+      <div class="modal-header">
+      <h1 class="text-center text-secondary mt-3">Students informations :</h1>
+      <h2 class="text-center text-primary">Saisissez les informations de l'apprenant</h2>
+      </div>
+<form id="formAddStud" class="mt-5 w-75 m-auto" action="add.php" method="POST" >
+            
+<label for="name">
+              <span>Name :</span>
+            </label>
+            <input type="text" id="name" name="name" class="w-100 p-1 mt-2">
+            <p class="messageName"></p>
+          
+            <label for="mail">
+              <span>Email :</span>
+            </label>
+            <input type="email" id="email"  name="email" class="w-100 p-1 mt-2">
+            <p class="messageEmail"></p>
+    
+            <label for="phone">
+                <span>Phone :</span>
+            </label>
+            <input type="tel" id="telephone" name="phone" class="w-100 p-1 mt-2">
+
+            <label for="enroll_number">
+                <span>Eroll Number :</span>
+            </label>
+            <input type="tel" id="enroll"  name="enroll_number" class="w-100 p-1 mt-2">
+ 
+            <button type="submit" name="submit" id="submit" class="btn btn-info w-100 mt-4">Save</button>
+
+</form>
+  <div class="modal-footer">
+        <button class="bg-secondary text-light" id="close">Close</button>
+  </div>
+    </div>
+ </div>
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

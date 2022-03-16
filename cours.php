@@ -55,7 +55,7 @@ if (!isset($_SESSION['ouvert'])) {
             <th scope="col">id</th>
             <th scope="col">Title</th>
             <th scope="col">Chapitres</th>
-            <th scope="col">Prix en $</th>
+            <th scope="col">Prix en MAD</th>
 
             <td></td>
           </tr>
@@ -104,7 +104,7 @@ if (!isset($_SESSION['ouvert'])) {
  <div id="addModal" class="modal">
     <div class="modal-content ">
       <div class="modal-header">
-      <h1 class="text-center text-secondary mt-3">Cours informations :</h1>
+      <h1 class="text-center text-secondary mt-3">Cours informations :</h1> 
       <h2 class="text-center text-primary">Saisissez les détails du cours</h2>
       </div>
 <form id="formAddCrs" class="mt-5 w-75 m-auto" action="addCrs.php" method="POST" >
@@ -113,16 +113,19 @@ if (!isset($_SESSION['ouvert'])) {
               <span>Title :</span>
             </label>
             <input type="text" id="title" name="title" class="w-100 p-1 mt-2">
+            <p class="messageTitle"></p>
           
             <label for="chapitre">
               <span>Nombre de Chapitres :</span>
             </label>
             <input type="number" id="chapitre" name="chapitre" class="w-100 p-1 mt-2">
+            <p class="messageChapter"></p>
     
             <label for="prix">
-                <span>Prix $ :</span>
+                <span>Prix MAD :</span>
             </label>
             <input type="text" id="prix" name="prix" class="w-100 p-1 mt-2">
+            <p class="messagePrix"></p>
  
             <button type="submit" name="submit" id="submit" class="btn btn-info w-100 mt-4">Save</button>
 
