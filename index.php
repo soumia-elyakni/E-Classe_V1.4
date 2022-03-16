@@ -64,7 +64,7 @@ if(isset($_POST['signin'])){
                    <?php if(isset($_SESSION["message_error"])){ echo $_SESSION["message_error"] ;} ?>
             </p>
         </div>
-        <form class="mt-4 pb-3" method="POST" id="form">
+        <form class="mt-4 pb-3" method="POST" id="formSignIn">
      
                 <label for="email">
                   <span>Email :</span>
