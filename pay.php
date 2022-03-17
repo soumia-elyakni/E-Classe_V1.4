@@ -141,10 +141,10 @@ if(!isset($_SESSION['ouvert'])){
 
             <button type="submit" name="submit" id="submit" class="btn btn-info w-100 mt-4">Save</button>
 
-</form>
+      </form>
   <div class="modal-footer">
         <button class="bg-secondary text-light" id="close">Close</button>
-  </div>
+ </div>
     </div>
  </div>
 

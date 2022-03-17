@@ -96,11 +96,11 @@ if (!isset($_SESSION['ouvert'])) {
           $connect->close();
           ?>
         </tbody>
-      </table>
-      </main>
+       </table>
+   </main>
 
        <!-- modal Add -->
-       
+
  <div id="addModal" class="modal">
     <div class="modal-content ">
       <div class="modal-header">
