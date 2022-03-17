@@ -38,9 +38,9 @@ if(!isset($_SESSION['ouvert'])){
               <button style="border: transparent; background: transparent; align-self: center;"> 
                  <img src="images/svg/buttonpay.svg">
               </button>
-              <a href="formP.php"><button class="addns text-white" style="border : none; background: #00C1FE; border-radius: 4px;">
+              <button id="add" class="addns text-white" style="border : none; background: #00C1FE; border-radius: 4px;">
              ADD A NEW PAYEMET
-             </button></a>
+             </button>
              </div>
       </section> 
 
@@ -98,5 +98,56 @@ if(!isset($_SESSION['ouvert'])){
           </tbody>
         </table>
     </main>
+
+     <!-- modal Add -->
+
+    <div id="addModal" class="modal">
+    <div class="modal-content ">
+      <div class="modal-header">
+      <h3 class="text-center text-secondary mt-3">A New Payement :</h3>
+      <h4 class="text-center text-primary">Remplissez les champs du payement</h4>
+      </div>
+      <form id="formAddPay" class="mt-5 w-75 m-auto" action="addP.php" method="POST" >
+            
+            <label for="name">
+              <span>Name :</span>
+            </label>
+            <input id="name" type="text" name="name" class="w-100 p-1 mt-2">
+            <p class="messageName"></p>
+          
+            <label for="payement_schedule">
+              <span>Payment Schedule :</span>
+            </label>
+            <input id="payShedule" type="text" name="payement_schedule" class="w-100 p-1 mt-2">
+            <p class="messagePayShed"></p>
+    
+            <label for="bill_number">
+                <span>Bill Number :</span>
+            </label>
+            <input id="billNum" type="text" name="bill_number" class="w-100 p-1 mt-2">
+            <p class="messageBillNm"></p>
+
+            <label for="amount_paid">
+                <span>Amount Paid :</span>
+            </label>
+            <input id="amntPaid" type="text" name="amount_paid" class="w-100 p-1 mt-2">
+            <p class="messageAmntPaid"></p>
+
+            <label for="balance_amount">
+                <span>Balance amount :</span>
+            </label>
+            <input id="blncAmnt" type="text" name="balance_amount" class="w-100 p-1 mt-2">
+            <p class="messageBalAmnt"></p>
+
+            <button type="submit" name="submit" id="submit" class="btn btn-info w-100 mt-4">Save</button>
+
+</form>
+  <div class="modal-footer">
+        <button class="bg-secondary text-light" id="close">Close</button>
+  </div>
+    </div>
+ </div>
+
+ <script src="js/script.js"></script>
 </body>
 </html>

@@ -85,6 +85,24 @@ main{
     color : red; 
 }
 
+.messagePayShed{
+    font-size: 13px;
+    color : red; 
+}
+
+.messageBillNm{
+    font-size: 13px;
+    color : red; 
+}
+.messageAmntPaid{
+    font-size: 13px;
+    color : red; 
+}
+.messageBalAmnt{
+    font-size: 13px;
+    color : red; 
+}
+
 /* .Atable{
     position: fixed;
 } */

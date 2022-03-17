@@ -95,14 +95,21 @@ const messagePrix = document.querySelector('.messagePrix');
 
         //students 
 const addStudentForm = document.getElementById('formAddStud');
-const addPayementForm = document.getElementById('formAddPay');
 const phoneInput = document.getElementById('telephone');
 const enrollNumberInput = document.getElementById('enroll');
 const messagePhone = document.querySelector('.messagePhone');
 const messageEnroll = document.querySelector('.messageEnroll');
 
         // payements
-        
+const addPayementForm = document.getElementById('formAddPay');
+const paymentScheduleInput = document.getElementById('payShedule');
+const billNumberInput = document.getElementById('billNum');
+const amountPaidInput = document.getElementById('amntPaid');
+const balanceAmountInput = document.getElementById('blncAmnt');
+const messagePayementS = document.querySelector('.messagePayShed');
+const messageBillNm = document.querySelector('.messageBillNm');
+const messageAmountP = document.querySelector('.messageAmntPaid');
+const messageBalanceAmt = document.querySelector('.messageBalAmnt');
 
 // Modals 
 
@@ -192,6 +199,64 @@ if(addStudentForm){
 }
 
         // Add a new payement
+
+if(addPayementForm){
+    addPayementForm.addEventListener('submit', (e) =>{
+        if (nameInput.value == "") {
+            e.preventDefault()
+            messageName.textContent = "Ce Champ est obligatoire";
+            nameInput.style.borderColor = "red"; 
+        } else {
+            messageName.textContent = "";
+            nameInput.style.borderColor = "green";
+        }
+
+        if(paymentScheduleInput.value == ""){
+            e.preventDefault()
+            messagePayementS.textContent = "Ce Champ est obligatoire";
+            paymentScheduleInput.style.borderColor = "red"; 
+
+        } else {
+            messagePayementS.textContent = "";
+            paymentScheduleInput.style.borderColor = "green";
+        }
+
+        if(billNumberInput.value == ""){
+            e.preventDefault()
+            messageBillNm.textContent = "Ce Champ est obligatoire";
+            billNumberInput.style.borderColor = "red"; 
+
+        } else {
+            messageBillNm.textContent = "";
+            billNumberInput.style.borderColor = "green";
+
+        }
+
+        if(amountPaidInput.value == ""){
+            e.preventDefault()
+            messageAmountP.textContent = "Ce Champ est obligatoire";
+            amountPaidInput.style.borderColor = "red"; 
+
+        } else {
+            messageAmountP.textContent = "";
+            amountPaidInput.style.borderColor = "green";
+
+        }
+
+        if(balanceAmountInput.value == ""){
+            e.preventDefault()
+            messageBalanceAmt.textContent = "Ce Champ est obligatoire";
+            balanceAmountInput.style.borderColor = "red"; 
+
+        } else {
+            messageBalanceAmt.textContent = "";
+            balanceAmountInput.style.borderColor = "green";
+
+        }
+    })
+        
+
+}       
 
 
     //   close the model
