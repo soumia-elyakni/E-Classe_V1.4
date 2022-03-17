@@ -14,7 +14,7 @@ if (!isset($_SESSION['ouvert'])) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Students</title>
+  <title>Cours</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="bootstrap.min.css">
 
@@ -104,8 +104,8 @@ if (!isset($_SESSION['ouvert'])) {
  <div id="addModal" class="modal">
     <div class="modal-content ">
       <div class="modal-header">
-      <h1 class="text-center text-secondary mt-3">Cours informations :</h1> 
-      <h2 class="text-center text-primary">Saisissez les détails du cours</h2>
+      <h3 class="text-center text-secondary mt-3">Cours informations :</h3> 
+      <h4 class="text-center text-primary">Saisissez les détails du cours</h4>
       </div>
 <form id="formAddCrs" class="mt-5 w-75 m-auto" action="addCrs.php" method="POST" >
             

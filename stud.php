@@ -100,8 +100,8 @@ if(!isset($_SESSION['ouvert'])){
  <div id="addModal" class="modal">
     <div class="modal-content ">
       <div class="modal-header">
-      <h1 class="text-center text-secondary mt-3">Students informations :</h1>
-      <h2 class="text-center text-primary">Saisissez les informations de l'apprenant</h2>
+      <h3 class="text-center text-secondary mt-3">Students informations :</h3>
+      <h4 class="text-center text-primary">Saisissez les informations de l'apprenant</h4>
       </div>
 <form id="formAddStud" class="mt-5 w-75 m-auto" action="add.php" method="POST" >
             
@@ -121,11 +121,13 @@ if(!isset($_SESSION['ouvert'])){
                 <span>Phone :</span>
             </label>
             <input type="tel" id="telephone" name="phone" class="w-100 p-1 mt-2">
+            <p class="messagePhone"></p>
 
             <label for="enroll_number">
                 <span>Enroll Number :</span>
             </label>
             <input type="tel" id="enroll"  name="enroll_number" class="w-100 p-1 mt-2">
+            <p class="messageEnroll"></p>
  
             <button type="submit" name="submit" id="submit" class="btn btn-info w-100 mt-4">Save</button>
 

@@ -78,16 +78,13 @@ if(form) {
 
 
 //Session Ouverte 
-//Modal
+    //Modal
 const add = document.getElementById('add');
-// const studentAdd = document.getElementById('studAdd');
-// const payementAdd = document.getElementById('payementAdd');
 const close = document.getElementById('close')
 const modalAdd = document.getElementById('addModal');
 
-
-//Modal's Inputs
-  //crs
+    //Modal's Content
+        //crs
 const addCourForm = document.getElementById('formAddCrs')
 const titleInput = document.getElementById('title');
 const chapitreInput = document.getElementById('chapitre');
@@ -95,20 +92,28 @@ const prixInput = document.getElementById('prix');
 const messageTitle = document.querySelector('.messageTitle');
 const messageChapter = document.querySelector('.messageChapter');
 const messagePrix = document.querySelector('.messagePrix');
-  //students et payements
 
+        //students 
+const addStudentForm = document.getElementById('formAddStud');
+const addPayementForm = document.getElementById('formAddPay');
+const phoneInput = document.getElementById('telephone');
+const enrollNumberInput = document.getElementById('enroll');
+const messagePhone = document.querySelector('.messagePhone');
+const messageEnroll = document.querySelector('.messageEnroll');
 
+        // payements
+        
 
 // Modals 
 
-// Show the model
+    // Show the modal
 add.onclick = function() {
     modalAdd.style.display = "block";
   }
 
-// addForm validation function
+    // addForm validation function
 
-// Add a new cour
+        // Add a new cour
 if(addCourForm) {
 
     addCourForm.addEventListener('submit', (e) => {
@@ -140,13 +145,56 @@ if(addCourForm) {
     })
 }
 
-// Add a new student
+        // Add a new student
+
+if(addStudentForm){
+    addStudentForm.addEventListener('submit', (e) => {
+        if (nameInput.value == "") {
+            e.preventDefault()
+            messageName.textContent = "Ce Champ est obligatoire";
+            nameInput.style.borderColor = "red"; 
+        } else {
+            messageName.textContent = "";
+            nameInput.style.borderColor = "green";
+        }
+        
+        if (emailInput.value == "") {
+            e.preventDefault()
+            messageEmail.textContent = "Ce Champ est obligatoire";
+            emailInput.style.borderColor = "red";
+        } else {
+            messageEmail.textContent = "";
+            emailInput.style.borderColor = "green";
+        }
+
+        if (phoneInput.value == "" ){
+            e.preventDefault()
+            messagePhone.textContent = "Ce Champ est obligatoire";
+            phoneInput.style.borderColor = "red";
+
+        } else {
+            messagePhone.textContent = "";
+            phoneInput.style.borderColor = "green";
+        }
+
+        if (enrollNumberInput.value == "" ){
+            e.preventDefault()
+            messageEnroll.textContent = "Ce Champ est obligatoire";
+            enrollNumberInput.style.borderColor = "red";
+
+        } else {
+            messageEnroll.textContent = "";
+            enrollNumberInput.style.borderColor = "green";
+        }
 
 
-// Add a new payement
+    })
+}
+
+        // Add a new payement
 
 
-//   close the model
+    //   close the model
 
 close.onclick = function() {
     modalAdd.style.display = "none";

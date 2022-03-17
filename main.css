@@ -75,6 +75,16 @@ main{
     color : red;
 }
 
+.messageEnroll{
+    font-size: 13px;
+    color : red; 
+}
+
+.messagePhone{
+    font-size: 13px;
+    color : red; 
+}
+
 /* .Atable{
     position: fixed;
 } */
