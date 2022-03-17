@@ -95,7 +95,7 @@ if(!isset($_SESSION['ouvert'])){
         </table> 
 
          <!-- modal Add -->
-
+         </main>
  
  <div id="addModal" class="modal">
     <div class="modal-content ">
@@ -123,7 +123,7 @@ if(!isset($_SESSION['ouvert'])){
             <input type="tel" id="telephone" name="phone" class="w-100 p-1 mt-2">
 
             <label for="enroll_number">
-                <span>Eroll Number :</span>
+                <span>Enroll Number :</span>
             </label>
             <input type="tel" id="enroll"  name="enroll_number" class="w-100 p-1 mt-2">
  
@@ -135,7 +135,7 @@ if(!isset($_SESSION['ouvert'])){
   </div>
     </div>
  </div>
-    </main>
+    
 
     <script src="js/script.js"></script>
 </body>

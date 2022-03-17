@@ -9,32 +9,43 @@ main{
 
 
 
-.modal {
+.modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 50; /* Sit on top */
-    width: 80vw; 
+    width: 100vw; 
     margin: auto;
     align-self: center;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
   }
 
+  
   .modal-header{
-      display: block;
+      display: block !important;
       text-align: center;
       
   }
 
   .modal-content {
-    background-color: #fefefe;
-    margin: auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    z-index: 55;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50vw !important;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 0.3rem;
+    outline: 0;
+    margin: auto;
+    margin-top: 3rem;
   }
+
+  
+
 
 
 
@@ -59,7 +70,7 @@ main{
     color : red;
 }
 
-.messageEmail{
+  .messageEmail{
     font-size: 13px;
     color : red;
 }

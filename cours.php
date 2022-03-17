@@ -38,7 +38,7 @@ if (!isset($_SESSION['ouvert'])) {
         <button style="border: transparent; background: transparent; align-self: center;">
           <img src="images/svg/buttonpay.svg">
         </button>
-        <button id="courAdd" class="addns text-white" style="border : none; background: #00C1FE; border-radius: 4px;">
+        <button id="add" class="addns text-white" style="border : none; background: #00C1FE; border-radius: 4px;">
           ADD NEW COURS
         </button>
 
@@ -100,7 +100,7 @@ if (!isset($_SESSION['ouvert'])) {
 
       <!-- modal Add -->
 
- 
+      </main>
  <div id="addModal" class="modal">
     <div class="modal-content ">
       <div class="modal-header">
@@ -138,7 +138,7 @@ if (!isset($_SESSION['ouvert'])) {
 
 
 
-  </main>
+ 
 
   <script src="js/script.js"></script>
 </body>
